@@ -26,7 +26,6 @@ exports.getInventory = catchAsyncError(async (req, res, next) => {
 //create new inventory
 exports.createInventory = catchAsyncError(async (req, res, next) => {
   const result = await Data.create(req.body);
-  // const data =  result.save();
   res.status(200).send({
     success: true,
     result
